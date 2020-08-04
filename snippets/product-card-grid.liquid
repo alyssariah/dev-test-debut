@@ -48,3 +48,10 @@
   {% include 'product-price-listing', product: product, show_vendor: show_vendor %}
 
 </div>
+{% comment %}
+    Shows a "buy now" button under each product on collection pages.
+    Show onlys when the toggle is on for the "show buy now button" under Collection checkout button in theme settings
+{% endcomment %}
+{% if show_button%}
+  <button class="btn">Buy Now</button>
+{% endif %}
