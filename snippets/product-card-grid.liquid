@@ -53,5 +53,7 @@
     Show onlys when the toggle is on for the "show buy now button" under Collection checkout button in theme settings
 {% endcomment %}
 {% if show_button%}
-  <button class="btn">Buy Now</button>
+
+  {% include 'collection-button' %}
+
 {% endif %}
