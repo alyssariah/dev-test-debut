@@ -1347,6 +1347,12 @@
         "id": "show_checkout_button",
         "label": "Show buy now button",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "add_to_cart_change",
+        "label": "Change button to add to cart",
+        "default": false
       }
       ]
    }
