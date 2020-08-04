@@ -4,9 +4,10 @@
     - max_height: {Number} Maximum height of the product's image (required)
     - product: {Object} Product Liquid object (required)
     - show_vendor: {Boolean} Show the product's vendor depending on the section setting (optional)
+    - show_button: {Boolean} Show the "buy it now" or "add to cart" button below depending on the section setting (optional)
 
     Usage:
-    {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
+    {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor, show_button: settings.show_checkout_button %}
 {% endcomment %}
 <div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card">
   <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ product.url | within: collection }}">
@@ -48,12 +49,6 @@
   {% include 'product-price-listing', product: product, show_vendor: show_vendor %}
 
 </div>
-{% comment %}
-    Shows a "buy now" button under each product on collection pages.
-    Show onlys when the toggle is on for the "show buy now button" under Collection checkout button in theme settings
-{% endcomment %}
-{% if show_button%}
-
+{% if show_button %}
   {% include 'collection-button' %}
-
 {% endif %}
