@@ -1338,5 +1338,16 @@
         "default": true
       }
     ]
-  }
+  },
+  {
+    "name": "Collection checkout button",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_checkout_button",
+        "label": "Show buy now button",
+        "default": false
+      }
+      ]
+   }
 ]
